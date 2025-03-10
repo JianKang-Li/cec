@@ -3,11 +3,11 @@ const path = require('node:path')
 const Utils = require('../utils')
 
 function init () {
-  const filePath = path.join(process.cwd(), './cec.json')
-  const configFile = path.join(__dirname, '../config/cec.json')
+  const filePath = path.join(process.cwd(), './cec.cjs')
+  const configFile = path.join(__dirname, '../config/cec.cjs')
 
   if (Utils.isExtend(filePath)) {
-    console.log('cec.json文件已存在！')
+    console.log('cec.cjs文件已存在！')
   } else {
     fs.copyFileSync(configFile, filePath)
   }

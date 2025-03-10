@@ -42,13 +42,11 @@ function mvFiles () {
 }
 
 function check () {
-  try {
-    configs = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'cec.json')))
+  if (Utils.isExtend(path.join(process.cwd(), 'cec.cjs'))) {
     return true
-  } catch {
-    console.log('请先运行`npx cec -i`初始化！')
-    return false
   }
+  console.log('请先运行`npx cec -i`初始化！')
+  return false
 }
 
 function buildChrome () {
@@ -110,6 +108,7 @@ function start (args) {
     }
     case '--build':
     case '-b': {
+      configs = require(path.join(process.cwd(), 'cec.cjs'))
       buildChrome()
       break
     }
