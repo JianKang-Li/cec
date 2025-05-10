@@ -41,6 +41,7 @@ export default [
         ObjectExpression: 1,
         SwitchCase: 1
       }],
+      'linebreak-style': ['error', 'unix'] // 强制 LF
     }
   },
   {
