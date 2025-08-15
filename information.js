@@ -1,5 +1,5 @@
 module.exports = {
-  version: '0.0.3',
+  version: '0.0.5',
   help: `
   欢迎使用 ChromeExtCli 脚本！
   --init/-i 初始化配置文件（初次使用请先运行此命令）
